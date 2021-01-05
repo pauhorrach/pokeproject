@@ -7,6 +7,7 @@ case class QuizQuestionHint(hint: String)
 
 case class QuizQuestion(question: String,
                         answer: String,
+                        options: List[String],
                         hints: List[QuizQuestionHint])
 
 case class Quiz(questions: List[QuizQuestion])
@@ -32,15 +33,16 @@ object QuizQuestion {
   implicit val quizQuestionWriter: Writes[QuizQuestion] =
     Json.writes[QuizQuestion]
 
-  def fromPokemon(pokemon: Pokemon): QuizQuestion = {
+  def fromPokemon(pokemons: List[Pokemon]): QuizQuestion = {
     QuizQuestion(
-      pokemon.images.head,
-      pokemon.name,
-      (pokemon.types
+      pokemons.head.images.head,
+      pokemons.head.name,
+      pokemons.map(pokemon => pokemon.name),
+      (pokemons.head.types
         .map(t => s"Its type is $t") ++ List(
-        s"Its height is ${pokemon.height}",
-        s"Its weight is ${pokemon.weight}",
-        s"Its name starts with ${pokemon.name.charAt(0)}"))
+        s"Its height is ${pokemons.head.height}",
+        s"Its weight is ${pokemons.head.weight}",
+        s"Its name starts with ${pokemons.head.name.charAt(0)}"))
         .map(hint => QuizQuestionHint.fromPokemon(hint))
     )
   }

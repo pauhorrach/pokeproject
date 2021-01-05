@@ -11,14 +11,26 @@ class QuizServiceImpl @Inject()(pokeService: PokeServiceImpl)
     extends QuizService {
 
   def createQuiz(): Future[Quiz] = {
-    val randomIdList = scala.util.Random.shuffle((1 to 898).toList).take(10)
+    val randomListIdLists: List[List[Int]] =
+      List.fill(10)(scala.util.Random.shuffle((1 to 500).toList).take(4))
+
+    /*    Future
+          .sequence(
+            randomIdList.map(id => pokeService.getPokemonByNameOrId(id.toString)))
+          .map(_.flatten)
+          .map(pokemonList =>
+            Quiz(pokemonList.map(pokemon => QuizQuestion.fromPokemon(pokemon))))*/
 
     Future
       .sequence(
-        randomIdList.map(id => pokeService.getPokemonByNameOrId(id.toString)))
-      .map(_.flatten)
-      .map(pokemonList =>
-        Quiz(pokemonList.map(pokemon => QuizQuestion.fromPokemon(pokemon))))
+        randomListIdLists.map(
+          idList =>
+            Future
+              .sequence(idList.map(id =>
+                pokeService.getPokemonByNameOrId(id.toString)))
+              .map(_.flatten)
+              .map(pokemonList => QuizQuestion.fromPokemon(pokemonList))))
+      .map(quizQuestionList => Quiz(quizQuestionList))
   }
 
   def calculateQuizResponseGrade(response: QuizResponse): Int = {
