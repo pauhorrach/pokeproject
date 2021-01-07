@@ -1,4 +1,3 @@
-/*
 .App {
   text-align: center;
 }
@@ -28,6 +27,12 @@
 .App-link {
   color: #61dafb;
 }
+/* 
+.App-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -37,4 +42,3 @@
     transform: rotate(360deg);
   }
 }
-*/
