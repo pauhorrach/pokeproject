@@ -1,0 +1,76 @@
+2021.01.05 10:24:46 INFO  Started: Metals version 0.9.8 in workspace 'C:\Users\pauho\Documents\pokeproject\pokeproject' for client vscode.
+2021.01.05 10:24:47 INFO  time: initialize in 1.21s
+2021.01.05 10:24:48 WARN  Build server is not auto-connectable.
+2021.01.05 10:26:23 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\HomeController.scala
+2021.01.05 10:26:26 INFO  no build target: using presentation compiler with only scala-library
+Jan 05, 2021 10:56:05 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2021.01.05 10:56:31 INFO  shutting down Metals
+2021.01.05 10:56:41 INFO  Started: Metals version 0.9.8 in workspace 'C:\Users\pauho\Documents\pokeproject\pokeproject' for client vscode.
+2021.01.05 10:56:42 INFO  time: initialize in 1.19s
+2021.01.05 10:56:43 WARN  Build server is not auto-connectable.
+2021.01.05 10:56:43 INFO  skipping build import with status 'Requested'
+Jan 05, 2021 10:56:48 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2021.01.05 10:57:01 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\HomeController.scala
+2021.01.05 10:57:03 INFO  no build target: using presentation compiler with only scala-library
+2021.01.05 12:06:27 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala
+2021.01.05 12:06:37 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:06:37 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:06:37 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:06:38 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:06:40 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:06:40 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:08:51 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\PokeController.scala
+2021.01.05 12:08:54 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\LoginController.scala
+2021.01.05 12:08:54 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\FrontendController.scala
+2021.01.05 12:08:58 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\FrontendController.scala' because it doesn't belong to a build target.
+2021.01.05 12:08:58 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\FrontendController.scala' because it doesn't belong to a build target.
+2021.01.05 12:08:58 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\FrontendController.scala' because it doesn't belong to a build target.
+2021.01.05 12:08:58 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\FrontendController.scala' because it doesn't belong to a build target.
+2021.01.05 12:09:13 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala
+2021.01.05 12:09:15 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:09:16 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:09:16 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:09:16 WARN  code navigation does not work for the file 'C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala' because it doesn't belong to a build target.
+2021.01.05 12:09:25 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\PokeService.scala
+2021.01.05 12:09:29 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizService.scala
+2021.01.05 12:09:33 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\models\Quiz.scala
+2021.01.05 12:19:49 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\PokeController.scala
+2021.01.05 12:19:55 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala
+2021.01.05 12:20:03 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizService.scala
+2021.01.05 12:20:04 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizServiceImpl.scala
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 390, 390, 404)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 390, 390, 397)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 390, 390, 399)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 390, 390, 400)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 390, 390, 402)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 390, 390, 400)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 395, 395, 409)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 395, 395, 402)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[<error>]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 395, 395, 403)
+something's wrong: no file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala in List[Int]RangePosition(file:///C:/Users/pauho/Documents/pokeproject/pokeproject/app/services/QuizServiceImpl.scala, 395, 395, 404)
+2021.01.05 12:23:32 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizServiceImpl.scala
+2021.01.05 15:17:09 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizServiceImpl.scala
+2021.01.05 15:17:25 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\models\Quiz.scala
+2021.01.05 15:17:29 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\models\Quiz.scala
+2021.01.05 15:17:29 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\models\Quiz.scala
+2021.01.05 16:26:03 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\QuizController.scala
+2021.01.05 16:26:26 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\PokeService.scala
+2021.01.05 16:26:28 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\PokeController.scala
+2021.01.05 16:26:29 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizService.scala
+2021.01.05 16:26:37 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\PokeController.scala
+2021.01.05 16:36:19 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\LoginController.scala
+2021.01.05 16:36:21 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\PokeController.scala
+2021.01.05 16:36:24 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\controllers\LoginController.scala
+2021.01.05 16:36:45 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizService.scala
+2021.01.05 16:38:04 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\PokeServiceImpl.scala
+2021.01.05 16:38:04 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\CsvManager.scala
+2021.01.05 16:38:05 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\PokeService.scala
+2021.01.05 16:39:52 WARN  no build target for: C:\Users\pauho\Documents\pokeproject\pokeproject\app\services\QuizService.scala
+2021.01.07 08:23:34 INFO  Started: Metals version 0.9.8 in workspace 'C:\Users\pauho\Documents\pokeproject\pokeproject' for client vscode.
+2021.01.07 08:23:35 INFO  time: initialize in 1.16s
+2021.01.07 08:23:39 WARN  Build server is not auto-connectable.
+2021.01.07 08:23:39 INFO  skipping build import with status 'Requested'
+Jan 07, 2021 8:50:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
