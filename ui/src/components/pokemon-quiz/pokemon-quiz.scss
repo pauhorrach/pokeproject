@@ -1,0 +1,10 @@
+.pokemon-quiz {
+    &-question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1ch;
+        margin-top: 250px;
+    }
+}

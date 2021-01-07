@@ -1,0 +1,29 @@
+.parent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+  
+  
+  
+  .search-input {
+    width: 700px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .button {
+    width: 200px;
+    margin-right: 30px
+  }
+  
+  .card-display {
+    width: 18rem;
+    display: block;
+    margin: 100px auto 0;
+  }
