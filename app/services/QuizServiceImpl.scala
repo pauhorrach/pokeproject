@@ -12,8 +12,8 @@ class QuizServiceImpl @Inject()(pokeService: PokeServiceImpl)
 
   def createQuiz(): Future[Quiz] = {
     val randomListIdLists: List[List[Int]] =
-      List.fill(10)(scala.util.Random.shuffle((1 to 500).toList).take(4))
-      
+      List.fill(10)(scala.util.Random.shuffle((1 to 500).toList).take(4))     
+    
     Future
       .sequence(
         randomListIdLists.map(
