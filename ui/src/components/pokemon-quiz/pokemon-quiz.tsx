@@ -1,11 +1,11 @@
-import { timeStamp } from "console";
+import {timeStamp} from "console";
 import React from "react";
-import { Spinner } from "react-bootstrap";
-import { QuizInterface, QuizQuestionInterface, QuizResponseInterface } from "../../interfaces/quiz.interface";
-import { PokemonCard } from "../pokemon-card/pokemon-card";
-import { PokemonQuizQuestion } from "./pokemon-quiz-question/pokemon-quiz-question";
-import { PokemonQuizResults } from "./pokemon-quiz-results/pokemon-quiz-results";
-import { PokemonQuizStart } from "./pokemon-quiz-start/pokemon-quiz-start";
+import {Spinner} from "react-bootstrap";
+import {QuizInterface, QuizQuestionInterface, QuizResponseInterface} from "../../interfaces/quiz.interface";
+import {PokemonCard} from "../pokemon-card/pokemon-card";
+import {PokemonQuizQuestion} from "./pokemon-quiz-question/pokemon-quiz-question";
+import {PokemonQuizResults} from "./pokemon-quiz-results/pokemon-quiz-results";
+import {PokemonQuizStart} from "./pokemon-quiz-start/pokemon-quiz-start";
 import './pokemon-quiz.scss'
 
 enum QuizState {
@@ -14,9 +14,7 @@ enum QuizState {
     Finished = 2
 }
 
-type IProps = {
-
-}
+type IProps = {}
 
 type IState = {
     quiz?: QuizInterface
@@ -44,7 +42,7 @@ export class PokemonQuiz extends React.Component<IProps, IState> {
             quiz: undefined,
             currentQuestion: 0,
             quizState: QuizState.Start,
-            userResponse: { answers: [] },
+            userResponse: {answers: []},
             score: 0
         }
     }
@@ -53,28 +51,30 @@ export class PokemonQuiz extends React.Component<IProps, IState> {
         fetch(`http://localhost:9000/api/quiz`)
             .then(response => response.json())
             .then(data => this.setState({
-                quiz: data
-            })
-            ).then(() => console.log(this.state))
+                    quiz: data
+                })
+            )
     }
 
     calculateScoreAndChangeQuizState() {
-        // fetch(`http://localhost:9000/api/quiz`,
-        //     {
-        //         method: 'POST',
-        //         body: JSON.stringify(this.state.userResponse),
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }
-        //     }
-        // ).then(data =>{ console.log(data.body); this.setState(() => ({
-        //     quizState: QuizState.Finished,
-        //     score: Number(data.body.)
-        // }
-        // ))})
+        fetch(`http://localhost:9000/api/quiz`,
+            {
+                method: 'POST',
+                body: JSON.stringify(this.state.userResponse),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+        ).then(response => response.text())
+            .then(data => {
+                this.setState(() => ({
+                    quizState: QuizState.Finished,
+                    score: Number(data)
+                }))
+            })
     }
 
-    handleQuestionAnswered(answer: string) {
+    handleQuestionAnswered(answer: string, usedHints: number) {
 
         if (this.state.quiz && this.state.currentQuestion + 1 < this.state.quiz?.questions.length) {
             this.setState((prevState) => ({
@@ -84,19 +84,27 @@ export class PokemonQuiz extends React.Component<IProps, IState> {
                         [{
                             solution: prevState.quiz && prevState.quiz?.questions[prevState.currentQuestion].answer || "",
                             userAnswer: answer,
-                            usedHints: 0
+                            usedHints: usedHints
                         }])
                 }
             }))
         } else {
-            this.calculateScoreAndChangeQuizState()
+            this.setState((prevState) => ({
+                userResponse: {
+                    answers: prevState.userResponse.answers.concat(
+                        [{
+                            solution: prevState.quiz && prevState.quiz?.questions[prevState.currentQuestion].answer || "",
+                            userAnswer: answer,
+                            usedHints: usedHints
+                        }])
+                }
+            }), () => this.calculateScoreAndChangeQuizState())
         }
-        console.log(this.state.userResponse)
     }
 
     handleQuizStart() {
         this.fetchQuizData();
-        this.setState(() => ({ quizState: QuizState.InProgress }))
+        this.setState(() => ({quizState: QuizState.InProgress}))
     }
 
     handleQuizStartOver() {
@@ -113,14 +121,18 @@ export class PokemonQuiz extends React.Component<IProps, IState> {
                         <Spinner animation="border" role="status">
                             <span className="sr-only">Loading...</span>
                         </Spinner> :
-                        <PokemonQuizQuestion key={this.state.currentQuestion}
-                            questionInfo={this.state.quiz.questions[this.state.currentQuestion]}
-                            handleAnsweredQuestion={this.handleQuestionAnswered}>
-                        </PokemonQuizQuestion>
+                        <div>
+                            <p className="pokemon-quiz-question-counter">Question: {this.state.currentQuestion + 1} / {this.state.quiz && this.state.quiz.questions.length}</p>
+                            <PokemonQuizQuestion key={this.state.currentQuestion}
+                                                 questionInfo={this.state.quiz.questions[this.state.currentQuestion]}
+                                                 handleAnsweredQuestion={this.handleQuestionAnswered}>
+                            </PokemonQuizQuestion>
+                        </div>
 
                 )
             case QuizState.Finished:
-                return <PokemonQuizResults handleStartOverQuiz={this.handleQuizStartOver}></PokemonQuizResults>
+                return <PokemonQuizResults score={this.state.score}
+                                           handleStartOverQuiz={this.handleQuizStartOver}></PokemonQuizResults>
         }
     }
 

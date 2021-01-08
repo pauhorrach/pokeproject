@@ -5,6 +5,12 @@
         align-items: center;
         justify-content: center;
         gap: 1ch;
-        margin-top: 250px;
+        margin-top: 100px;
+        &-counter {
+            display: flex;
+            justify-content: flex-end;
+            font-size: larger;
+            font-weight: bold;
+        }
     }
 }

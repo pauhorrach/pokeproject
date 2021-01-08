@@ -70,14 +70,15 @@ export class PokemonSearcher extends React.Component<{}, IState> {
         return (
             <div className="parent">
                 <div>
+                    <img
+                        src="/pokeball-logo.png"
+                        width="200px"
+                        className="main-image"
+                    />
                     <Form className="search-input">
                         <Form.Group controlId="searchCtrl">
-                            <Form.Label>Find a Pokemon</Form.Label>
                             <Form.Control type="text" value={this.state.searchText} placeholder="Write a Pokemon name"
                                 onChange={this.handleInputChanges} />
-                            <Form.Text className="text-muted">
-                                *You can also write an ID
-                                </Form.Text>
                         </Form.Group>
                     </Form>
                     <div className="button-group">

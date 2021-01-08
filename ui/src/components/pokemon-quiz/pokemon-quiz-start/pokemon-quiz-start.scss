@@ -1,8 +1,8 @@
 .pokemon-quiz-start {
-    &-card {
-        width: 40rem;
-        &--header {
-            display: flex;
-        }
+    display: flex;
+    flex-direction: column;
+
+    &-button {
+        margin-top: 40px
     }
 }

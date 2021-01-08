@@ -1,8 +1,27 @@
-.pokemon-quiz-start {
+.pokemon-quiz-results {
     &-card {
         width: 40rem;
         &--header {
             display: flex;
+        }
+    }
+
+    &-score {
+        transform-style: preserve-3d;
+        font-family: 'Oswald', sans-serif;
+        color: #333333;
+        text-shadow: 1px 1px 5px black;
+        &--number {
+            transform-style: preserve-3d;
+            font-size:90px;
+            line-height: 90px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        &--title {
+            transform-style: preserve-3d;
+            font-size:70px;
+            line-height: 70px;
         }
     }
 }

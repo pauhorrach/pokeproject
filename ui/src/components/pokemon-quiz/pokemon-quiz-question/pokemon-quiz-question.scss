@@ -16,5 +16,21 @@
             margin-left: 15px;
             width: 40%;
         }
+
+        &--button {
+            text-transform: capitalize;
+        }
+        &--footer {
+            display: flex;
+            align-items: center;
+        }
     }
   }
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.ml-30 {
+    margin-left: 15px;
+}

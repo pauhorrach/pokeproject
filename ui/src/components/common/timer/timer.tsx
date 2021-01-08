@@ -24,7 +24,6 @@ export class Timer extends React.Component<IProps, IState> {
 
 
     componentDidMount() {
-        console.log(this.state.time)
         this.interval = setInterval(() => {
             this.setState((prevState) => ({ time: prevState.time - 1 }));
         }, 1000);

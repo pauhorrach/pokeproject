@@ -1,8 +1,9 @@
-  
 package models
 
 import io.circe.{Decoder, HCursor}
 import play.api.libs.json.{Json, Writes}
+
+import scala.util.Random
 
 case class QuizQuestionHint(hint: String)
 
@@ -38,7 +39,7 @@ object QuizQuestion {
     QuizQuestion(
       pokemons.head.images.head,
       pokemons.head.name,
-      pokemons.map(pokemon => pokemon.name),
+      Random.shuffle(pokemons.map(pokemon => pokemon.name)),
       (pokemons.head.types
         .map(t => s"Its type is $t") ++ List(
         s"Its height is ${pokemons.head.height}",
